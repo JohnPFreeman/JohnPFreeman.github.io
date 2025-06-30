@@ -16,6 +16,9 @@
       }
 
       canvas {
+        position: absolute;
+        top: 50%;
+        left: 50%;
         transform-origin: top left;
       }
     </style>
@@ -26,6 +29,19 @@
 
   </head>
   <body>
+    <script>
+      function scaleCanvasToFit() {
+        const scaleX = window.innerWidth / width;
+        const scaleY = window.innerHeight / height;
+        const scale = Math.min(scaleX, scaleY); // preserve aspect ratio
+
+        const canvasElt = document.querySelector('canvas');
+        canvasElt.style.transform = 'translate(-50%, -50%) scale(${scale})';
+      }
+
+      window.addEventListener('resize', scaleCanvasToFit);
+      window.addEventListener('load', scaleCanvasToFit);
+    </script>
     <main>
     </main>
     <script src="menus.js"></script>
