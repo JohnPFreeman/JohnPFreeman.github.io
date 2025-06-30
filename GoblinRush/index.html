@@ -9,17 +9,15 @@
         padding: 0;
         height: 100%;
         width: 100%;
-        overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
       }
 
       canvas {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform-origin: top left;
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
       }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.js"></script>
@@ -29,19 +27,6 @@
 
   </head>
   <body>
-    <script>
-      function scaleCanvasToFit() {
-        const scaleX = window.innerWidth / width;
-        const scaleY = window.innerHeight / height;
-        const scale = Math.min(scaleX, scaleY); // preserve aspect ratio
-
-        const canvasElt = document.querySelector('canvas');
-        canvasElt.style.transform = 'translate(-50%, -50%) scale(${scale})';
-      }
-
-      window.addEventListener('resize', scaleCanvasToFit);
-      window.addEventListener('load', scaleCanvasToFit);
-    </script>
     <main>
     </main>
     <script src="menus.js"></script>
