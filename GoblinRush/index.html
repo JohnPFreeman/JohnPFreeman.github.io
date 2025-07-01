@@ -10,7 +10,7 @@
         height: 100%;
         width: 100%;
         overflow: hidden;
-        background: black; /* Letterbox color */
+        background: white; /* Letterbox color */
       }
 
       body {
@@ -21,19 +21,19 @@
 
       canvas {
         display: block;
-        /* Do not resize canvas itself — keep its fixed pixel size */
+        /* Keep original canvas size — scale with transform */
         transform-origin: top left;
       }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/addons/p5.sound.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <meta charset="utf-8" />
-
   </head>
+
   <body>
-    <main>
-    </main>
+    <main></main>
+
     <script src="menus.js"></script>
     <script src="arrows.js"></script>
     <script src="player.js"></script>
@@ -43,6 +43,7 @@
     <script src="enemy.js"></script>
     <script src="sketch.js"></script>
 
+    <!-- ✅ The scaling logic goes last -->
     <script>
       window.addEventListener('load', () => {
         const canvas = document.querySelector('canvas');
