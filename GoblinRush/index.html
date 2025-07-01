@@ -10,22 +10,19 @@
         height: 100%;
         width: 100%;
         overflow: hidden;
-        /*background: black;  or any letterbox color */
+        background: black; /* Letterbox color */
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       canvas {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-        /* This combo fills the screen while preserving aspect ratio: */
-        width: 100%;
-        height: auto;
-
-        /* But if it's too tall, limit height and let width auto adjust */
-        max-height: 100%;
-        max-width: 100%;
+        display: block;
+        /* Do not resize canvas itself — keep its fixed pixel size */
+        transform-origin: top left;
       }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.js"></script>
@@ -45,5 +42,25 @@
     <script src="arrowToken.js"></script>
     <script src="enemy.js"></script>
     <script src="sketch.js"></script>
+
+    <script>
+      window.addEventListener('load', () => {
+        const canvas = document.querySelector('canvas');
+
+        function resizeCanvas() {
+          const scaleX = window.innerWidth / 500;
+          const scaleY = window.innerHeight / 400;
+          const scale = Math.min(scaleX, scaleY);
+          canvas.style.position = 'absolute';
+          canvas.style.left = '50%';
+          canvas.style.top = '50%';
+          canvas.style.transformOrigin = 'top left';
+          canvas.style.transform = `translate(-50%, -50%) scale(${scale})`;
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+      });
+    </script>
   </body>
 </html>
