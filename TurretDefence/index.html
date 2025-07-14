@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        background: white; /* Letterbox color */
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      canvas {
+        display: block;
+        /* Keep original canvas size — scale with transform */
+        transform-origin: top left;
+      }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <script src="sketch.js"></script>
+    <script>
+      window.addEventListener('load', () => {
+        const canvas = document.querySelector('canvas');
+
+        function resizeCanvas() {
+          const scaleX = window.innerWidth / 500;
+          const scaleY = window.innerHeight / 400;
+          const scale = Math.min(scaleX, scaleY);
+          canvas.style.position = 'absolute';
+          canvas.style.left = '50%';
+          canvas.style.top = '50%';
+          canvas.style.transformOrigin = 'top left';
+          canvas.style.transform = `translate(-50%, -50%) scale(${scale})`;
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+      });
+    </script>
+  </body>
+</html>
+
+
+
+
+
