@@ -1,0 +1,686 @@
+
+>Start of a transcript of:
+
+Smash The Rock
+An Interactive Fiction by John P. Freeman
+Release 1 / Serial number 260414 / Inform 7 v10.1.2 / D
+Inform 7 v10.1.2
+Identification number: //63902A7A-758F-4624-BA78-063162F2F92C//
+Interpreter version 0.6.1 / VM 3.1.3
+
+>RESTART
+Are you sure you want to restart? yes
+
+
+
+
+Smash The Rock
+An Interactive Fiction by John P. Freeman
+Release 1 / Serial number 260414 / Inform 7 v10.1.2 / D
+
+Center of Room
+You stand in the center of a giant, windowless room that extends out into the distance. You wonder why someone in their right mind would make such a large room, at least until you notice the enormous rock in front of you with two small googley eyes hot glued to it. Clearly the designer of the room was not in their right mind, so you may as well not question it. The Rock is sitting ontop of a small trapdoor, the room's only identifiable exit. You jump as The Rock shouts at you.
+"Oi ya bastard! I certaintly be doubtin that you be gettin out of ere. Least not without goin through me first, but with yer scrawny lil arms ye aint go much chance o that! Heh heh heh . . . " The googly eyes shake as it laughs. "Smash me if ye dare!"
+The pirate accent seems fake and you doubt The Rock is committed enough to continue it next time. 
+The room extends in all directions, including northeast, southwest, etc. You hear bored but melodic humming to the north.
+
+You can see a trapdoor, The Rock, a Gold Coin and an Andesite Chest (closed) here.
+
+The rock laughs at you. 
+"What're you going to do big guy? Sit on me?"
+
+>take coin
+(the Gold Coin)
+Taken.
+If only you had someone to trade with . . .
+
+>n
+
+Northern Side
+An old woman covered in robes sits on a small stool behind a large wooden chest. A dangling sign on the front says "Sellin Stuff". Talking to them may lead to good deals.
+The room ends to the north, but continues in all other directions.
+
+An old woman is here.
+
+>talk to woman
+The woman looks up to see you and a mild satisfaction reaches strikes their face for a brief moment. 
+"So! It seems that damned Rock found another plaything. I've long given up trying to destroy it, but you have fun trying. Oh how rude of me, I am a trader by trade, but you can call me The Trader. I've been in this room long enough to find many trinkets; if you talk to me I'd love to hand them over. For a price, that is." 
+(You may sell with "sell <item>" or buy with "buy <item>." See what's in stock by talking to The Trader. See your coin count in the top right of your screen)
+
+>talk to trader
+"So you wish to see what I've got to offer? I hope you've got coins."
+          Rubber Mallet   -   2
+          Chisel   -   5
+          Hammer   -   8
+          The Stone   -   12
+          Garden Gnome   -   16
+          The Log   -   20
+          40% HCl   -   24
+          Dwarf   -   32
+          Sledgehammer   -   36
+          The Boulder   -   42
+          Bucket 'o' Napalm   -   50
+          Franklin   -   64
+
+>w
+
+Northwest Corner
+In the corner of the room is a majestic chest made entirly of diamonds. On the wall next to it is a far less majestic framed picture of The Rock photoshopped onto a picture of a shirtless Dwayne Johnson. It is . . . hard to look at.
+The room's walls block you to the north and west.
+
+You can see a Diamond Chest (closed) and a Framed Picture of The Rock Photoshopped onto a Picture of a Shirtless Dwayne Johnson here.
+
+>take picture
+Taking the horrible picture reveals a small hole in the wall. Inside it is an Andesite Key.
+
+>take key
+Taken.
+
+>se
+
+Center of Room
+The room extends in all directions.
+
+You can see a trapdoor, The Rock and an Andesite Chest (closed) here.
+
+The rock laughs at you. 
+"What're you going to do big guy? Sit on me?"
+
+>unlock chest with key
+You unlock the Andesite Chest.
+
+>open chest
+You open the Andesite Chest, revealing a Gold Key and a Sizable Pile of Coins.
+
+>take coins
+Taken.
+The Trader would like these.
+
+>take key
+(the Gold Key)
+Taken.
+
+>n
+
+Northern Side
+The room ends to the north, but continues in all other directions.
+
+The Trader is here.
+
+>talk to trader
+"So you wish to see what I've got to offer? I hope you've got coins."
+          Rubber Mallet   -   2
+          Chisel   -   5
+          Hammer   -   8
+          The Stone   -   12
+          Garden Gnome   -   16
+          The Log   -   20
+          40% HCl   -   24
+          Dwarf   -   32
+          Sledgehammer   -   36
+          The Boulder   -   42
+          Bucket 'o' Napalm   -   50
+          Franklin   -   64
+
+>i
+You are carrying:
+  a Gold Key
+  an Andesite Key
+  a Framed Picture of The Rock Photoshopped onto a Picture of a Shirtless Dwayne Johnson
+  a Coin Pouch
+
+>sell picture
+The Trader looks at you with genuine disgust.
+"What the . . . What is this? Why the hell would you give me this? I don't want this, take it away from me, please. Damn, time to bleach my eyes again."
+
+>buy hammer
+The Trader reluctantly hands over the Hammer, then greedily takes your coins.
+
+>x rock
+You can't see any such thing.
+
+>s
+
+Center of Room
+The room extends in all directions.
+
+You can see a trapdoor, The Rock and an Andesite Chest (empty) here.
+
+The rock laughs at you. 
+"Your head's denser than mine."
+
+>x rock
+The Rock is sturdy, with no scratches or scrapes to speak of.
+(Rock Health: 1000)
+
+>attack rock with hammer
+You smash The Rock with the Hammer. The Rock seems to wince the tiniest bit.
+
+>smash rock with hammer
+You smash The Rock with the Hammer. The Rock seems to wince the tiniest bit.
+
+>kill rock with hammer
+You smash The Rock with the Hammer. The Rock seems to wince the tiniest bit.
+
+>merk rock with hammer
+You smash The Rock with the Hammer. The Rock seems to wince the tiniest bit.
+
+>x rock
+The Rock is sturdy, with no scratches or scrapes to speak of.
+(Rock Health: 960)
+
+>ne
+
+Northeast Corner
+In the corner of the room is a chest made entirly of rubies. Pacing around the center of the room is a large, angry goose. It honks at you angrily.
+The room's walls block you to the north and east.
+
+You can see a Ruby Chest (closed) and an Angry Goose here.
+
+The Angry Goose honks angrily at you at steals the rest of your coins.
+
+>s
+
+Eastern Side
+You are greeted by flashing lights and beepy boops from a Slot Machine built into the wall. Slumped in a chair facing it is an Entire Human Skeleton, with a Sizable Pile of Coins and an Emerald Key scattered below them. 
+The room ends to the east, but continues in all other directions.
+
+You can see a Sizable Pile of Coins, an Emerald Key, an Entire Human Skeleton and a Slot Machine here.
+
+>take coins
+Taken.
+The Trader would like these.
+
+>take key
+(the Emerald Key)
+Taken.
+
+>take skeleton
+Taken.
+
+>x slot machine
+
+Someone scratched a message on the back of the machine: Let's go gambling! Try "Bet 1"
+
+>bet 1
+You slip one gold coin into the machine and the wheels of the machine start spinning . . .
+Winner WInner Winner! The machine pops out 2 gold coins which you grab greedily. You realize you're on a winning streak and should gamble more.
+
+>bet 5
+You slip five gold coins into the machine and the wheels of the machine start spinning . . .
+Whomp Whomp, someone's our big loser! You realize that with all this bad luck you're in for a big score soon.
+
+>bet 5
+You slip five gold coins into the machine and the wheels of the machine start spinning . . .
+Whomp Whomp, someone's our big loser! You realize that with all this bad luck you're in for a big score soon.
+
+>D:
+That's not a verb I recognise.
+
+>s
+
+Southeast Corner
+In the corner of the room is a chest made entirly of gold. Wriggling on the floor infront of you is a tapeworm.
+The room's walls block you to the south and east.
+
+You can see a Gold Chest (closed) and a Tapeworm here.
+
+>take tapeworm
+Taken.
+
+>i
+You are carrying:
+  a Tapeworm
+  an Entire Human Skeleton
+  an Emerald Key
+  a Hammer
+  a Gold Key
+  an Andesite Key
+  a Framed Picture of The Rock Photoshopped onto a Picture of a Shirtless Dwayne Johnson
+  a Coin Pouch
+
+>open chest with key
+Which do you mean, the Emerald Key, the Gold Key or the Andesite Key?
+
+>open chest with gold key
+You unlock the Gold Chest.
+
+>open chest
+You open the Gold Chest, revealing a Diamond Key and a Large Pile of Coins.
+
+>take diamond key
+Taken.
+
+>take coins
+Taken.
+The Trader would like these.
+
+>e
+You can't go that way.
+
+>w
+
+Southern Side
+Infront of you massive obsidian steps lead up to an ominous alter. At the top is an Obsidian Chest flanked by two burning Black Candles. You wonder who keeps replacing the candle. Before you is an Ornate Obsidian Key. How convenient!
+The room ends to the south, but continues in all other directions.
+
+You can see an Ornate Obsidian Key and an Obsidian Chest (closed) here.
+
+>take candles
+One at a time, please!
+
+>take candle
+Taken.
+
+>take candle
+Taken.
+
+>take key
+(the Ornate Obsidian Key)
+Taken.
+
+>open obsidian chest with ornate key
+As you turn the key, you jump back as the Obsidian Chest rumbles and shakes before dissolving into a fine obsidian powder that blows away in a gust of wind. Where there used to be the Obsidian Chest you now see . . . Another Obsidian Chest.
+
+>k steps
+That's not a verb I recognise.
+
+>x steps
+Each step is engraved with ominous runes. Thankfully you majored in rune deciphering back at rune school. 
+"The Obsidian Chest is beyond one key, if you seek its contents three shall it be"
+
+>n
+
+Center of Room
+The room extends in all directions.
+
+You can see a trapdoor, The Rock and an Andesite Chest (empty) here.
+
+The rock laughs at you. 
+"You're softer than limestone."
+
+>i
+You are carrying:
+  two Black Candles
+  a Diamond Key
+  a Tapeworm
+  an Entire Human Skeleton
+  an Emerald Key
+  a Hammer
+  a Gold Key
+  an Andesite Key
+  a Framed Picture of The Rock Photoshopped onto a Picture of a Shirtless Dwayne Johnson
+  a Coin Pouch
+
+>attack rock with hammer
+You smash The Rock with the Hammer. The Rock seems to wince the tiniest bit.
+
+>attack rock with skeleton
+You smash The Rock with the Entire Human Skeleton. It was not very effective.
+
+>attack rock with tapeworm
+The Tapeworm latches onto The Rock and wriggles its way inside. Gross.
+
+>x rock
+The Rock is sturdy, with no scratches or scrapes to speak of.
+(Rock Health: 946)
+
+>x rock
+The Rock is sturdy, with no scratches or scrapes to speak of.
+(Rock Health: 943)
+
+>x rock
+The Rock is sturdy, with no scratches or scrapes to speak of.
+(Rock Health: 940)
+
+>n
+
+Northern Side
+The room ends to the north, but continues in all other directions.
+
+The Trader is here.
+
+>sell skeleton
+The Trader greets your item with glee.
+"An Entire Human Skeleton? What a curious find. A marvelous trinket! I must have it, here's 9 gold coins."
+
+>i
+You are carrying:
+  two Black Candles
+  a Diamond Key
+  an Emerald Key
+  a Hammer
+  a Gold Key
+  an Andesite Key
+  a Framed Picture of The Rock Photoshopped onto a Picture of a Shirtless Dwayne Johnson
+  a Coin Pouch
+
+>sell candle
+The Trader greets your item with glee.
+"A Black Candle? What a curious find. A marvelous trinket! I must have it, here's 10 gold coins."
+
+>sell candle
+The Trader greets your item with glee.
+"A Black Candle? What a curious find. A marvelous trinket! I must have it, here's 10 gold coins."
+
+>sell hammer
+The Trader greets your item with glee.
+"A Hammer? What a curious find. A marvelous trinket! I must have it, here's 8 gold coins."
+
+>w
+
+Northwest Corner
+The room's walls block you to the north and west.
+
+You can see a Diamond Chest (closed) here.
+
+>open diamond chest with diamond key
+You unlock the Diamond Chest.
+
+>open chest
+You open the Diamond Chest, revealing a Rare Diamond and a Glossy Obsidian Key.
+
+>take diamond
+(the Diamond Chest)
+That's fixed in place.
+
+>take obsidian key
+Taken.
+
+>take rare diamond
+Taken.
+
+>e
+
+Northern Side
+The room ends to the north, but continues in all other directions.
+
+The Trader is here.
+
+>sell diamond
+Which do you mean, the Rare Diamond or the Diamond Key?
+
+>sell rare diamond
+The Trader greets your item with glee.
+"A Rare Diamond? What a curious find. A marvelous trinket! I must have it, here's 64 gold coins."
+
+>talk to trader
+"So you wish to see what I've got to offer? I hope you've got coins."
+          Rubber Mallet   -   2
+          Chisel   -   5
+          The Stone   -   12
+          Garden Gnome   -   16
+          The Log   -   20
+          40% HCl   -   24
+          Dwarf   -   32
+          Sledgehammer   -   36
+          The Boulder   -   42
+          Bucket 'o' Napalm   -   50
+          Franklin   -   64
+
+>buy franklin
+The Trader reluctantly hands over Franklin, then greedily takes your coins.
+
+>buy napalm
+The Trader reluctantly hands over the Bucket 'o' Napalm, then greedily takes your coins.
+
+>s
+
+Center of Room
+The room extends in all directions.
+
+You can see a trapdoor, The Rock and an Andesite Chest (empty) here.
+
+The rock laughs at you. 
+"Your head's denser than mine."
+
+>x rock
+The Rock is sturdy, with no scratches or scrapes to speak of.
+(Rock Health: 883)
+
+>attack rock with franklin
+The Franklin bounces off The Rock and lands on the ground. They stand up and brush themself off.
+
+You see Franklin chip away at The Rock.
+
+>attack rock with napalm
+You splash the Bucket 'o' Napalm onto The Rock. The Rock shudders with whatever the rock version of pain is.
+
+You see Franklin chip away at The Rock.
+
+>attack rock with napalm
+You splash the Bucket 'o' Napalm onto The Rock. The Rock shudders with whatever the rock version of pain is.
+
+You see Franklin chip away at The Rock.
+
+>attack rock with napalm
+You splash the Bucket 'o' Napalm onto The Rock. The Rock shudders with whatever the rock version of pain is.
+
+You see Franklin chip away at The Rock.
+
+>attack rock with napalm
+You splash the Bucket 'o' Napalm onto The Rock. The Rock shudders with whatever the rock version of pain is.
+
+You see Franklin chip away at The Rock.
+The Rock begins shaking as it slowly crumbles into dust.
+"Oh geez, oh no, not like this! I didn't want it to end like this! I still have so many insults! Uuuh . . . you're . . . you look really dumb right now. And your forehead is big. More like a fivehead. Heheheh, how was that? Was that good? Ok ima die now."
+Within momments all that's left is a pile of rubble. You could feel bad, but you have trapdoors to go through.
+
+>sw
+
+Southwest Corner
+In the corner of the room is a chest made entirly of emeralds. On the floor before you sits a massive Russian Nesting Doll. 
+The room's walls block you to the south and west.
+
+You can see an Emerald Chest (closed) and a Massive Russian Nesting Doll (closed) here.
+
+>e
+
+Southern Side
+The room ends to the south, but continues in all other directions.
+
+You can see Another Obsidian Chest (closed) here.
+
+>open obsidian chest
+It seems to be locked.
+
+>open obsidian chest with obsidian key
+As you turn the key, you are slightly less surprised to see this Obsidian Chest rumble and shake before dissolving into a fine obsidian powder. Inside it was Yet Another Obsidian Chest.
+
+>nw
+
+Western Side
+Pushed against the western side of the room is a giant haystack. You wonder what you might find in there . . .
+The room ends to the west, but continues in all other directions.
+
+You can see a Small Pile of Coins and a Haystack here.
+
+>take coins
+Taken.
+The Trader would like these.
+
+>i
+You are carrying:
+  a Bucket 'o' Napalm
+  a Diamond Key
+  an Emerald Key
+  a Gold Key
+  an Andesite Key
+  a Framed Picture of The Rock Photoshopped onto a Picture of a Shirtless Dwayne Johnson
+  a Coin Pouch
+
+>x haystack
+This Haystack is quite searchable.
+
+>search haystack
+After flopping around in the hay for a couple minutes, you don't seem to find anything.
+
+>search haystack
+After flopping around in the hay for a couple minutes, you don't seem to find anything.
+
+>search haystack
+After flopping around in the hay for a couple minutes, you don't seem to find anything.
+
+>search haystack
+After flopping around in the hay for a couple minutes, you don't seem to find anything.
+
+>search haystack
+While searching in the hay you find a Rusty Needle.
+
+>search haystack
+While searching in the hay you find a Gold Coin.
+
+>search haystack
+While searching in the hay you find a Dusty Obsidian Key.
+
+>search haystack
+While searching in the hay you find a Dull Needle.
+
+>search haystack
+While searching in the hay you find a Copper Needle.
+
+>search haystack
+After flopping around in the hay for a couple minutes, you don't seem to find anything.
+
+>search haystack
+While searching in the hay you find a Shiny Needle.
+
+>search haystack
+While searching in the hay you find a Gold Coin.
+
+>sw
+You can't go that way.
+
+>se
+
+Southern Side
+The room ends to the south, but continues in all other directions.
+
+You can see Yet Another Obsidian Chest (closed) here.
+
+>open obsidian chest with obsidian key
+As you turn the key for the final time, the final Obsidian Chest dissolves into even more obsidian powder. As the last of the dust blows away you see The Obsidian Skull, a Large Pile of Coins, and a Piece of Paper.
+
+>take paper
+Taken.
+
+>take coins
+Taken.
+The Trader would like these.
+
+>take skull
+Taken.
+
+>n
+
+Center of Room
+The room extends in all directions.
+
+You can see The Rubble, Franklin, a trapdoor and an Andesite Chest (empty) here.
+
+>n
+
+Northern Side
+The room ends to the north, but continues in all other directions.
+
+The Trader is here.
+
+>sell skull
+The Trader greets your item with glee.
+"The Obsidian Skull? What a curious find. A marvelous trinket! I must have it, here's 128 gold coins."
+
+>sell napalm
+The Trader greets your item with glee.
+"A Bucket 'o' Napalm? What a curious find. A marvelous trinket! I must have it, here's 50 gold coins."
+
+>i
+You are carrying:
+  a Piece of Paper
+  a Shiny Needle
+  a Copper Needle
+  a Dull Needle
+  a Rusty Needle
+  a Diamond Key
+  an Emerald Key
+  a Gold Key
+  an Andesite Key
+  a Framed Picture of The Rock Photoshopped onto a Picture of a Shirtless Dwayne Johnson
+  a Coin Pouch
+
+>sell papr
+You can't see any such thing.
+
+>sell paper
+The Trader greets your item with glee.
+"A Piece of Paper? What a curious find. A marvelous trinket! I must have it, here's 1 gold coin."
+
+>sell needle
+Which do you mean, the Shiny Needle, the Copper Needle, the Dull Needle or the Rusty Needle?
+
+>sell shiny needle
+The Trader greets your item with glee.
+"A Shiny Needle? What a curious find. A marvelous trinket! I must have it, here's 5 gold coins."
+
+>sell copper needle
+The Trader greets your item with glee.
+"A Copper Needle? What a curious find. A marvelous trinket! I must have it, here's 5 gold coins."
+
+>sell rusty needle
+The Trader greets your item with glee.
+"A Rusty Needle? What a curious find. A marvelous trinket! I must have it, here's 5 gold coins."
+
+>sell dull needle
+The Trader greets your item with glee.
+"A Dull Needle? What a curious find. A marvelous trinket! I must have it, here's 5 gold coins."
+
+>i
+You are carrying:
+  a Diamond Key
+  an Emerald Key
+  a Gold Key
+  an Andesite Key
+  a Framed Picture of The Rock Photoshopped onto a Picture of a Shirtless Dwayne Johnson
+  a Coin Pouch
+
+>sell diamond key
+The Trader greets your item with glee.
+"A Diamond Key? What a curious find. A marvelous trinket! I must have it, here's 1 gold coin."
+
+>sell emerald key
+The Trader greets your item with glee.
+"An Emerald Key? What a curious find. A marvelous trinket! I must have it, here's 1 gold coin."
+
+>sell gold key
+The Trader greets your item with glee.
+"A Gold Key? What a curious find. A marvelous trinket! I must have it, here's 1 gold coin."
+
+>sell andesite key
+The Trader greets your item with glee.
+"An Andesite Key? What a curious find. A marvelous trinket! I must have it, here's 1 gold coin."
+
+>s
+
+Center of Room
+The room extends in all directions.
+
+You can see The Rubble, Franklin, a trapdoor and an Andesite Chest (empty) here.
+
+>d
+(first opening the trapdoor)
+You push aside the rubble, thankful that The Rock has finially shut up, and open the trapdoor.
+
+
+
+    *** 
+After climbing down a long ladder you find yourself looking down a much, much longer hallway. At the end you can just barely see light. Finially, escape. Behind you you hear The Trader decending the ladder.
+"So you actually did it, I didn't think you had it in you. If only the creator of the game made rooms outside of this one. Unfortunately, it seems this room is called The End of the Game, so I doubt there's anything past this."
+
+You have successfully smashed The Rock. 
+Score: 562
+(Hint: Score is Three Times Gold Coins minus Turns Spent)
+    ***
+
+
+
+Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
+> 
