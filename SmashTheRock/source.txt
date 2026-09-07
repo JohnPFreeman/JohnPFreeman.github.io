@@ -2,7 +2,7 @@
 
 When play begins:
 	seed the random-number generator with 0;
-	say "[bold type]Basic Text Adventure Info:[roman type][line break]Go North = n (repeat for s, e, w, ne, nw, se, sw)[line break]Examine <thing> = x <thing> (examines it)[line break]look = l (tells you what's around)[line break]inventory = i (see what's in your inventory)[line break]take <thing> (picks up thing)[line break]unlock <container> with <thing> (opens container with thing)[line break]open <container> (opens container)[line break]smash <thing1> with <thing2> (smashes thing1 with thing2)[line break]talk to <blank> (talk to someone)[line break][line break]"
+	say "[bold type]Basic Text Adventure Info:[roman type][line break]Go North = n (repeat for s, e, w, ne, nw, se, sw)[line break]Examine <thing> = x <thing> (examines it)[line break]Look = l (tells you what's around)[line break]Inventory = i (see what's in your inventory)[line break]Take <thing> (picks up thing)[line break]Unlock <container> with <thing> (opens container with thing)[line break]Open <container> (opens container)[line break]Smash <thing1> with <thing2> (smashes thing1 with thing2)[line break]Talk to <blank> (talk to someone)[line break][line break]"
 
 	
 Include Basic Screen Effects by Emily Short.
