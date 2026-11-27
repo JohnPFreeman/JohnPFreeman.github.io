@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<title>MycoMyco</title>
+
+	<!-- Home screen: "Add to Home Screen" picks these up when this page is the one being saved. -->
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+	<link rel="manifest" href="manifest.webmanifest">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="apple-mobile-web-app-title" content="MycoMyco">
+	<meta name="theme-color" content="#000000">
+
+	<style>
+		html,
+		body {
+			background: #000;
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			/* Touches belong to the game: no scrolling, pull-to-refresh, pinch zoom or text selection. */
+			overscroll-behavior: none;
+			touch-action: none;
+			-webkit-user-select: none;
+			user-select: none;
+			-webkit-touch-callout: none;
+			-webkit-tap-highlight-color: transparent;
+		}
+
+		#unity-canvas {
+			position: fixed;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			display: block;
+			touch-action: none;
+			outline: none;
+		}
+
+		#loading-bar {
+			position: fixed;
+			left: 20%;
+			right: 20%;
+			top: 50%;
+			height: 1rem;
+			margin-top: -0.5rem;
+			border: 2px solid #fff;
+			border-radius: 0.5rem;
+			overflow: hidden;
+		}
+
+		#loading-fill {
+			width: 0%;
+			height: 100%;
+			background: #fff;
+		}
+
+		/* The game only makes sense sideways, so ask phones held upright to rotate. */
+		#rotate-prompt {
+			display: none;
+			position: fixed;
+			inset: 0;
+			z-index: 10;
+			background: #000;
+			color: #fff;
+			font-family: sans-serif;
+			font-size: 1.4rem;
+			text-align: center;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 1.5rem;
+		}
+
+		#rotate-prompt img {
+			width: 40vw;
+			max-width: 220px;
+			animation: tilt 1.6s ease-in-out infinite;
+		}
+
+		@keyframes tilt {
+			0%, 20% { transform: rotate(0deg); }
+			50%, 70% { transform: rotate(-90deg); }
+			100% { transform: rotate(0deg); }
+		}
+
+		@media (orientation: portrait) and (pointer: coarse) {
+			#rotate-prompt {
+				display: flex;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<canvas id="unity-canvas" tabindex="-1"></canvas>
+	<div id="loading-bar"><div id="loading-fill"></div></div>
+	<div id="rotate-prompt">
+		<img src="icon-512.png" alt="">
+		<div>Turn your phone sideways</div>
+	</div>
+
+	<script src="Build/MycoMyco_v1.2.0.loader.js"></script>
+	<script>
+		var canvas = document.querySelector("#unity-canvas");
+		var loadingBar = document.querySelector("#loading-bar");
+		var loadingFill = document.querySelector("#loading-fill");
+
+		var config = {
+			dataUrl: "Build/MycoMyco_v1.2.0.data.br",
+			frameworkUrl: "Build/MycoMyco_v1.2.0.framework.js.br",
+			codeUrl: "Build/MycoMyco_v1.2.0.wasm.br",
+			streamingAssetsUrl: "StreamingAssets",
+			companyName: "DefaultCompany",
+			productName: "MycoMyco",
+			productVersion: "1.0",
+			autoSyncPersistentDataPath: true,
+			// Phones report up to 3x pixel density; 2x is plenty for this game and much lighter to render.
+			devicePixelRatio: Math.min(window.devicePixelRatio || 1, 2),
+		};
+
+		createUnityInstance(canvas, config, function (progress) {
+			loadingFill.style.width = (progress * 100) + "%";
+		}).then(function () {
+			loadingBar.remove();
+		}).catch(function (message) {
+			alert(message);
+		});
+
+		// Go fullscreen and lock to landscape on the first tap. Browsers only allow this from a user gesture, and
+		// some (Safari on iPhone) don't support it at all, so every step is optional.
+		function enterFullscreenLandscape() {
+			var root = document.documentElement;
+			var request = root.requestFullscreen || root.webkitRequestFullscreen;
+			if (request && !document.fullscreenElement && !document.webkitFullscreenElement) {
+				Promise.resolve(request.call(root)).then(function () {
+					if (screen.orientation && screen.orientation.lock) {
+						return screen.orientation.lock("landscape");
+					}
+				}).catch(function () { });
+			}
+		}
+
+		if (matchMedia("(pointer: coarse)").matches) {
+			window.addEventListener("pointerup", enterFullscreenLandscape, { once: true });
+		}
+	</script>
+</body>
+
+</html>
