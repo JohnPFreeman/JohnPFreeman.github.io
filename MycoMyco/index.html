@@ -8,7 +8,6 @@
 	<title>MycoMyco</title>
 
 	<!-- Home screen: "Add to Home Screen" picks these up when this page is the one being saved. -->
-	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
 	<link rel="manifest" href="manifest.webmanifest">
@@ -46,22 +45,52 @@
 			outline: none;
 		}
 
-		#loading-bar {
+		/* The loading bar: a chunky track that fills with fungus, with the player running on its leading edge */
+		#loading {
 			position: fixed;
 			left: 20%;
 			right: 20%;
 			top: 50%;
-			height: 1rem;
-			margin-top: -0.5rem;
-			border: 2px solid #fff;
-			border-radius: 0.5rem;
+			height: 32px;
+			margin-top: -16px;
+		}
+
+		#loading-bar {
+			position: absolute;
+			inset: 0;
+			border: 5px solid #fff;
+			background: #1a1a1a;
 			overflow: hidden;
 		}
 
 		#loading-fill {
 			width: 0%;
 			height: 100%;
-			background: #fff;
+			background: url("loading-fungus.png") repeat;
+			background-size: 32px 32px;
+			image-rendering: pixelated;
+		}
+
+		/* Three 64 px walk frames shown at their real size so every pixel is even, stepping through them at the game's own 12 fps.
+		   The four stacked shadows add up to a square 5 px white outline, the same as the bar's border */
+		#loading-runner {
+			position: absolute;
+			left: 0%;
+			top: 50%;
+			width: 64px;
+			height: 64px;
+			transform: translate(-50%, -50%);
+			background: url("loading-runner.png") no-repeat 0 0;
+			background-size: 192px 64px;
+			image-rendering: pixelated;
+			filter: drop-shadow(5px 0 0 #fff) drop-shadow(-5px 0 0 #fff) drop-shadow(0 5px 0 #fff) drop-shadow(0 -5px 0 #fff);
+			animation: loading-run 0.25s steps(3) infinite;
+			pointer-events: none;
+		}
+
+		@keyframes loading-run {
+			from { background-position: 0 0; }
+			to { background-position: -192px 0; }
 		}
 
 		/* The game only makes sense sideways, so ask phones held upright to rotate. */
@@ -103,22 +132,26 @@
 
 <body>
 	<canvas id="unity-canvas" tabindex="-1"></canvas>
-	<div id="loading-bar"><div id="loading-fill"></div></div>
+	<div id="loading">
+		<div id="loading-bar"><div id="loading-fill"></div></div>
+		<div id="loading-runner"></div>
+	</div>
 	<div id="rotate-prompt">
 		<img src="icon-512.png" alt="">
 		<div>Turn your phone sideways</div>
 	</div>
 
-	<script src="Build/MycoMyco_v1.2.0.loader.js"></script>
+	<script src="Build/MycoMyco_v1.3.0.loader.js"></script>
 	<script>
 		var canvas = document.querySelector("#unity-canvas");
-		var loadingBar = document.querySelector("#loading-bar");
+		var loading = document.querySelector("#loading");
 		var loadingFill = document.querySelector("#loading-fill");
+		var loadingRunner = document.querySelector("#loading-runner");
 
 		var config = {
-			dataUrl: "Build/MycoMyco_v1.2.0.data.br",
-			frameworkUrl: "Build/MycoMyco_v1.2.0.framework.js.br",
-			codeUrl: "Build/MycoMyco_v1.2.0.wasm.br",
+			dataUrl: "Build/MycoMyco_v1.3.0.data.unityweb",
+			frameworkUrl: "Build/MycoMyco_v1.3.0.framework.js.unityweb",
+			codeUrl: "Build/MycoMyco_v1.3.0.wasm.unityweb",
 			streamingAssetsUrl: "StreamingAssets",
 			companyName: "DefaultCompany",
 			productName: "MycoMyco",
@@ -130,8 +163,9 @@
 
 		createUnityInstance(canvas, config, function (progress) {
 			loadingFill.style.width = (progress * 100) + "%";
+			loadingRunner.style.left = (progress * 100) + "%";
 		}).then(function () {
-			loadingBar.remove();
+			loading.remove();
 		}).catch(function (message) {
 			alert(message);
 		});
